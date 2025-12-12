@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorStrings>
+  <PolyGroups ModuleName="MPU6050">
+    <PolyGroup Name="MPU6050" DisplayName="MPU6050">
+      <Description><![CDATA[<p>Context help for PolyGroup <b>MPU6050</b></p>]]></Description>
+      <Parameter Name="Port" DisplayName="Port" Link="page.html?Path=editor%2FPortSelector.html#Port">
+        <Description><![CDATA[Many programming blocks require that you select the ports on the EV3 Brick (A, B, C, D, 1, 2, 3, and 4) that these blocks will use. The Port Selectors are in the top right-hand corner of these blocks.]]></Description>
+      </Parameter>
+      <Parameter Name="AccX" DisplayName="Acceleration X">
+        <Description><![CDATA[<p>Context help for Parameter <b>A</b></p>]]></Description>
+      </Parameter>
+      <Parameter Name="AccY" DisplayName="Acceleration Y">
+        <Description><![CDATA[<p>Context help for Parameter <b>B</b></p>]]></Description>
+      </Parameter>
+      <Parameter Name="AccZ" DisplayName="Acceleration Z">
+        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      </Parameter>
+      <Parameter Name="Tmp" DisplayName="Temperature">
+        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      </Parameter>
+      <Parameter Name="GyroX" DisplayName="Gyroscope X">
+        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      </Parameter>
+      <Parameter Name="GyroY" DisplayName="Gyroscope Y">
+        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      </Parameter>
+      <Parameter Name="GyroZ" DisplayName="Gyroscope Z">
+        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      </Parameter>
+      <Block Mode="MeasureAcceleration" DisplayName="Acceleration">
+        <Description><![CDATA[<p>Context help for Block <b>One</b></p>]]></Description>
+      </Block>
+      <Block Mode="MeasureTemperature" DisplayName="Temperature">
+        <Description><![CDATA[<p>Context help for Block <b>One</b></p>]]></Description>
+      </Block>
+      <Block Mode="MeasureGyroscope" DisplayName="Gyroscope">
+        <Description><![CDATA[<p>Context help for Block <b>One</b></p>]]></Description>
+      </Block>
+    </PolyGroup>
+  </PolyGroups>
+</EditorStrings>

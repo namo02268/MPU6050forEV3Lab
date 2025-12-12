@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorDefinitions>
+  <PolyGroups ModuleName="MPU6050" ModuleVersion="1.0.0">
+    <PolyGroup Name="MPU6050" BlockFamily="Sensor">
+      <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.4" />
+			<Parameter Name="AccX" Direction="Output" DataType="Int32" Identification="Identification_Acceleration_X.png" />
+			<Parameter Name="AccY" Direction="Output" DataType="Int32" Identification="Identification_Acceleration_Y.png" />
+			<Parameter Name="AccZ" Direction="Output" DataType="Int32" Identification="Identification_Acceleration_Z.png" />
+      <Parameter Name="Tmp" Direction="Output" DataType="Int32" Identification="Identification_Temperature.png" />
+      <Parameter Name="GyroX" Direction="Output" DataType="Int32" Identification="Identification_Gyro_X.png" />
+      <Parameter Name="GyroY" Direction="Output" DataType="Int32" Identification="Identification_Gyro_Y.png" />
+      <Parameter Name="GyroZ" Direction="Output" DataType="Int32" Identification="Identification_Gyro_Z.png" />
+
+      <Hardware>
+				<NXTPlotColor>#ffffab34</NXTPlotColor>
+				<EV3PlotColor>#ffd46800</EV3PlotColor>
+				<EV3AutoID>-1</EV3AutoID>
+				<Direction>Input</Direction>
+				<DefaultPort>1.4</DefaultPort>
+			</Hardware>
+
+      <Block>
+        <Mode>MeasureAcceleration</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureAcceleration.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="AccX" />
+        <ParameterReference Name="AccY" />
+        <ParameterReference Name="AccZ" />
+        <PaletteInfo Weight="0.5" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureTemperature</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureTemperature.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Tmp" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureGyroscope</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureGyroscope.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="GyroX" />
+        <ParameterReference Name="GyroY" />
+        <ParameterReference Name="GyroZ" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+    </PolyGroup>
+  </PolyGroups>
+</EditorDefinitions>
