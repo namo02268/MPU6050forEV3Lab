@@ -3,13 +3,13 @@
   <PolyGroups ModuleName="MPU6050" ModuleVersion="1.0.0">
     <PolyGroup Name="MPU6050" BlockFamily="Sensor">
       <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.4" />
-			<Parameter Name="AccX" Direction="Output" DataType="Int32" Identification="Identification_Acceleration_X.png" />
-			<Parameter Name="AccY" Direction="Output" DataType="Int32" Identification="Identification_Acceleration_Y.png" />
-			<Parameter Name="AccZ" Direction="Output" DataType="Int32" Identification="Identification_Acceleration_Z.png" />
-      <Parameter Name="Tmp" Direction="Output" DataType="Int32" Identification="Identification_Temperature.png" />
-      <Parameter Name="GyroX" Direction="Output" DataType="Int32" Identification="Identification_Gyro_X.png" />
-      <Parameter Name="GyroY" Direction="Output" DataType="Int32" Identification="Identification_Gyro_Y.png" />
-      <Parameter Name="GyroZ" Direction="Output" DataType="Int32" Identification="Identification_Gyro_Z.png" />
+			<Parameter Name="AccX" Direction="Output" DataType="Single" Identification="Identification_Acceleration_X.png" />
+			<Parameter Name="AccY" Direction="Output" DataType="Single" Identification="Identification_Acceleration_Y.png" />
+			<Parameter Name="AccZ" Direction="Output" DataType="Single" Identification="Identification_Acceleration_Z.png" />
+      <Parameter Name="Tmp" Direction="Output" DataType="Single" Identification="Identification_Temperature.png" />
+      <Parameter Name="GyroX" Direction="Output" DataType="Single" Identification="Identification_Gyro_X.png" />
+      <Parameter Name="GyroY" Direction="Output" DataType="Single" Identification="Identification_Gyro_Y.png" />
+      <Parameter Name="GyroZ" Direction="Output" DataType="Single" Identification="Identification_Gyro_Z.png" />
 
       <Hardware>
 				<NXTPlotColor>#ffffab34</NXTPlotColor>
