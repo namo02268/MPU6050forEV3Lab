@@ -7,34 +7,34 @@
         <Description><![CDATA[多くのプログラミング ブロックでは、 EV3ブロックのポート（A、B、C、D、1、2、3、および4）を選択する必要があります。ポート セレクターはこれらのブロックの最上部右隅にあります。]]></Description>
       </Parameter>
       <Parameter Name="AccX" DisplayName="加速度 X軸">
-        <Description><![CDATA[<p>Context help for Parameter <b>A</b></p>]]></Description>
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> X軸方向の加速度</p>]]></Description>
       </Parameter>
       <Parameter Name="AccY" DisplayName="加速度 Y軸">
-        <Description><![CDATA[<p>Context help for Parameter <b>B</b></p>]]></Description>
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> Y軸方向の加速度</p>]]></Description>
       </Parameter>
       <Parameter Name="AccZ" DisplayName="加速度 Z軸">
-        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> Z軸方向の加速度</p>]]></Description>
       </Parameter>
       <Parameter Name="Tmp" DisplayName="温度">
-        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> 温度</p>]]></Description>
       </Parameter>
-      <Parameter Name="GyroX" DisplayName="ジャイロ X軸">
-        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      <Parameter Name="GyroX" DisplayName="角速度 X軸">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> X軸方向の角速度</p>]]></Description>
       </Parameter>
-      <Parameter Name="GyroY" DisplayName="ジャイロ Y軸">
-        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      <Parameter Name="GyroY" DisplayName="角速度 Y軸">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> Y軸方向の角速度</p>]]></Description>
       </Parameter>
-      <Parameter Name="GyroZ" DisplayName="ジャイロ Z軸">
-        <Description><![CDATA[<p>Context help for Parameter <b>C</b></p>]]></Description>
+      <Parameter Name="GyroZ" DisplayName="角速度 Z軸">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> Z軸方向の角速度</p>]]></Description>
       </Parameter>
       <Block Mode="MeasureAcceleration" DisplayName="加速度">
-        <Description><![CDATA[<p>Context help for Block <b>One</b></p>]]></Description>
+        <Description><![CDATA[「測定 - 加速度」モードでは、X軸・Y軸・Z軸それぞれの加速度を測定し、出力します。]]></Description>
       </Block>
       <Block Mode="MeasureTemperature" DisplayName="温度">
-        <Description><![CDATA[<p>Context help for Block <b>One</b></p>]]></Description>
+        <Description><![CDATA[「測定 - 温度」モードでは、センサーで測定した温度を出力します。]]></Description>
       </Block>
       <Block Mode="MeasureGyroscope" DisplayName="ジャイロ">
-        <Description><![CDATA[<p>Context help for Block <b>One</b></p>]]></Description>
+        <Description><![CDATA[「測定 - ジャイロ」モードでは、X軸・Y軸・Z軸それぞれの角速度を測定し、出力します。]]></Description>
       </Block>
     </PolyGroup>
   </PolyGroups>
