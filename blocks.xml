@@ -10,6 +10,8 @@
       <Parameter Name="GyroX" Direction="Output" DataType="Single" Identification="Identification_Gyro_X.png" />
       <Parameter Name="GyroY" Direction="Output" DataType="Single" Identification="Identification_Gyro_Y.png" />
       <Parameter Name="GyroZ" Direction="Output" DataType="Single" Identification="Identification_Gyro_Z.png" />
+      <Parameter Name="TiltX" Direction="Output" DataType="Single" Identification="Identification_Tilt_X.png" />
+      <Parameter Name="TiltY" Direction="Output" DataType="Single" Identification="Identification_Tilt_Y.png" />
 
       <Hardware>
 				<NXTPlotColor>#ffffab34</NXTPlotColor>
@@ -47,6 +49,16 @@
         <ParameterReference Name="GyroX" />
         <ParameterReference Name="GyroY" />
         <ParameterReference Name="GyroZ" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureTilt</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureTilt.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="TiltX" />
+        <ParameterReference Name="TiltY" />
         <BlockInterface>Measure</BlockInterface>
         <Flags>PBROnly</Flags>
         <Hardware></Hardware>

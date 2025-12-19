@@ -6,26 +6,32 @@
       <Parameter Name="Port" DisplayName="Port" Link="page.html?Path=editor%2FPortSelector.html#Port">
         <Description><![CDATA[Many programming blocks require that you select the ports on the EV3 Brick (A, B, C, D, 1, 2, 3, and 4) that these blocks will use. The Port Selectors are in the top right-hand corner of these blocks.]]></Description>
       </Parameter>
-      <Parameter Name="AccX" DisplayName="Acceleration X-axis">
+      <Parameter Name="AccX" DisplayName="Acceleration[g] X-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Acceleration along the X-axis</p>]]></Description>
       </Parameter>
-      <Parameter Name="AccY" DisplayName="Acceleration Y-axis">
+      <Parameter Name="AccY" DisplayName="Acceleration[g] Y-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Acceleration along the Y-axis</p>]]></Description>
       </Parameter>
-      <Parameter Name="AccZ" DisplayName="Acceleration Z-axis">
+      <Parameter Name="AccZ" DisplayName="Acceleration[g] Z-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Acceleration along the Z-axis</p>]]></Description>
       </Parameter>
-      <Parameter Name="Tmp" DisplayName="Temperature">
+      <Parameter Name="Tmp" DisplayName="Temperature[℃]">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Temperature</p>]]></Description>
       </Parameter>
-      <Parameter Name="GyroX" DisplayName="Gyroscope X-axis">
+      <Parameter Name="GyroX" DisplayName="Gyroscope[°/s] X-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Angular velocity along the X-axis</p>]]></Description>
       </Parameter>
-      <Parameter Name="GyroY" DisplayName="Gyroscope Y-axis">
+      <Parameter Name="GyroY" DisplayName="Gyroscope[°/s] Y-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Angular velocity along the Y-axis</p>]]></Description>
       </Parameter>
-      <Parameter Name="GyroZ" DisplayName="Gyroscope Z-axis">
+      <Parameter Name="GyroZ" DisplayName="Gyroscope[°/s] Z-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Angular velocity along the Z-axis</p>]]></Description>
+      </Parameter>
+      <Parameter Name="TiltX" DisplayName="Tilt[°] X-axis">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Tilt along the X-axis</p>]]></Description>
+      </Parameter>
+      <Parameter Name="TiltY" DisplayName="Tilt[°] Y-axis">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Tilt along the Y-axis</p>]]></Description>
       </Parameter>
       <Block Mode="MeasureAcceleration" DisplayName="Acceleration">
         <Description><![CDATA[The Measure - Acceleration mode measures and outputs the accelerations along the X, Y, and Z axes.]]></Description>
@@ -35,6 +41,9 @@
       </Block>
       <Block Mode="MeasureGyroscope" DisplayName="Gyroscope">
         <Description><![CDATA[The Measure - Acceleration mode measures and outputs the angular velocities along the X, Y, and Z axes.]]></Description>
+      </Block>
+      <Block Mode="MeasureTilt" DisplayName="Tilt">
+        <Description><![CDATA[The Measure - Tilt mode measures and outputs the tilts along the X and Y axes.]]></Description>
       </Block>
     </PolyGroup>
   </PolyGroups>
