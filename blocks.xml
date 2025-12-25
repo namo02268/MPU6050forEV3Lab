@@ -12,6 +12,9 @@
       <Parameter Name="GyroZ" Direction="Output" DataType="Single" Identification="Identification_Gyro_Z.png" />
       <Parameter Name="TiltX" Direction="Output" DataType="Single" Identification="Identification_Tilt_X.png" />
       <Parameter Name="TiltY" Direction="Output" DataType="Single" Identification="Identification_Tilt_Y.png" />
+      <Parameter Name="Threshold" Identification="Identification_Threshold_MPU6050.xml" DataType="Single" Direction="Input" DefaultValue="128" MinValue="0" MaxValue="255" />
+      <Parameter Name="Result" CompilerDirectives="Result" Identification="Identification_Result.png" DataType="Boolean" Direction="Output"/>
+      <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
 
       <Hardware>
 				<NXTPlotColor>#ffffab34</NXTPlotColor>
@@ -34,15 +37,6 @@
         <Hardware></Hardware>
       </Block>
       <Block>
-        <Mode>MeasureTemperature</Mode>
-        <Reference Type="VILib" Name="MPU6050MeasureTemperature.vix" />
-        <ParameterReference Name="Port" />
-        <ParameterReference Name="Tmp" />
-        <BlockInterface>Measure</BlockInterface>
-        <Flags>PBROnly</Flags>
-        <Hardware></Hardware>
-      </Block>
-      <Block>
         <Mode>MeasureGyroscope</Mode>
         <Reference Type="VILib" Name="MPU6050MeasureGyroscope.vix" />
         <ParameterReference Name="Port" />
@@ -54,15 +48,102 @@
         <Hardware></Hardware>
       </Block>
       <Block>
-        <Mode>MeasureTilt</Mode>
-        <Reference Type="VILib" Name="MPU6050MeasureTilt.vix" />
+        <Mode>MeasureTemperature</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureTemperature.vix" />
         <ParameterReference Name="Port" />
-        <ParameterReference Name="TiltX" />
-        <ParameterReference Name="TiltY" />
+        <ParameterReference Name="Tmp" />
         <BlockInterface>Measure</BlockInterface>
         <Flags>PBROnly</Flags>
         <Hardware></Hardware>
       </Block>
+      <Category Name="CompareAcceleration">
+        <Block>
+          <Mode>CompareAccelerationX</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareAccelerationX.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="AccX" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+        <Block>
+          <Mode>CompareAccelerationY</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareAccelerationY.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="AccY" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+        <Block>
+          <Mode>CompareAccelerationZ</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareAccelerationZ.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="AccZ" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+      </Category>
+      <Block>
+        <Mode>CompareTemperature</Mode>
+        <Reference Type="VILib" Name="MPU6050CompareTemperature.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Tmp" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Category Name="CompareGyroscope">
+        <Block>
+          <Mode>CompareGyroscopeX</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareGyroscopeX.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="GyroX" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+        <Block>
+          <Mode>CompareGyroscopeY</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareGyroscopeY.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="GyroY" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+        <Block>
+          <Mode>CompareGyroscopeZ</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareGyroscopeZ.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="GyroZ" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+      </Category>
     </PolyGroup>
   </PolyGroups>
 </EditorDefinitions>

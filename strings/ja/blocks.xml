@@ -27,12 +27,24 @@
       <Parameter Name="GyroZ" DisplayName="角速度[°/s] Z軸">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> Z軸方向の角速度</p>]]></Description>
       </Parameter>
+      <!--
       <Parameter Name="TiltX" DisplayName="傾き[°] X軸">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> X軸方向の傾き</p>]]></Description>
       </Parameter>
       <Parameter Name="TiltY" DisplayName="傾き[°] Y軸">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> Y軸方向の傾き</p>]]></Description>
       </Parameter>
+      -->
+      <Parameter Name="Comparison" DisplayName="比較タイプ">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 5<br/><b>備考:</b> 0:= (～と等しい)<br/>1:≠ (～と等しくありません)<br/>2:&gt; (～超過)<br/>3: ≥ (～以上)<br/>4:&lt; (～未満)<br/>5:≤ (～以下)</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Threshold" DisplayName="しきい値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Result" DisplayName="比較結果">
+        <Description><![CDATA[<p><b>タイプ:</b> ロジック<br/><b>備考:</b> 比較モードの真/偽の結果です。</p>]]></Description>
+      </Parameter>
+
       <Block Mode="MeasureAcceleration" DisplayName="加速度">
         <Description><![CDATA[「測定 - 加速度」モードでは、X軸・Y軸・Z軸それぞれの加速度を測定し、出力します。]]></Description>
       </Block>
@@ -42,9 +54,36 @@
       <Block Mode="MeasureGyroscope" DisplayName="ジャイロ">
         <Description><![CDATA[「測定 - ジャイロ」モードでは、X軸・Y軸・Z軸それぞれの角速度を測定し、出力します。]]></Description>
       </Block>
+      <!--
       <Block Mode="MeasureTilt" DisplayName="傾き">
         <Description><![CDATA[「測定 - 傾き」モードでは、X軸・Y軸それぞれの傾きを測定し、出力します。]]></Description>
       </Block>
+      -->
+      <Category Name="CompareAcceleration" DisplayName="加速度">
+        <Block Mode="CompareAccelerationX" DisplayName="X軸">
+          <Description><![CDATA[「比較 - 加速度 X軸」ブロックは、X軸方向の加速度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+        </Block>
+        <Block Mode="CompareAccelerationY" DisplayName="Y軸">
+          <Description><![CDATA[「比較 - 加速度 Y軸」ブロックは、Y軸方向の加速度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+        </Block>
+        <Block Mode="CompareAccelerationZ" DisplayName="Z軸">
+          <Description><![CDATA[「比較 - 加速度 Z軸」ブロックは、Z軸方向の加速度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+        </Block>
+      </Category>
+      <Block Mode="CompareTemperature" DisplayName="温度">
+        <Description><![CDATA[「比較 - 温度」ブロックは、温度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+      </Block>
+      <Category Name="CompareGyroscope" DisplayName="ジャイロ">
+        <Block Mode="CompareGyroscopeX" DisplayName="X軸">
+          <Description><![CDATA[「比較 - ジャイロ X軸」ブロックは、X軸方向の角速度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+        </Block>
+        <Block Mode="CompareGyroscopeY" DisplayName="Y軸">
+          <Description><![CDATA[「比較 - ジャイロ Y軸」ブロックは、Y軸方向の角速度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+        </Block>
+        <Block Mode="CompareGyroscopeZ" DisplayName="Z軸">
+          <Description><![CDATA[「比較 - ジャイロ Z軸」ブロックは、Z軸方向の角速度をしきい値と比較します。真/偽の結果が比較結果に出力されます。]]></Description>
+        </Block>
+      </Category>
     </PolyGroup>
   </PolyGroups>
 </EditorStrings>
