@@ -84,7 +84,7 @@
                         <Add Id="n82" Terminals="x\+y=w90, y=w84, x=w83" TopLeft="343 217" />
                         <Wire Id="w83" Joints="N(n73:c0t1v) N(n82:x)" />
                         <Wire Id="w84" Joints="N(n78:x\*y) h(7) v(-35) N(n82:y)" />
-                        <Wire Id="w90" Joints="N(n82:x\+y) h(76) v(14) h(46) v(-56) N(n128:y) B(3) v(14) v(49) h(207) v(-28) N(n123:f) B(6) N(n124:x)" />
+                        <Wire Id="w90" Joints="N(n82:x\+y) h(76) v(14) h(46) v(14) N(n124:x) B(4) v(49) h(207) v(-28) N(n123:f) B(3) v(-56) N(n128:y)" />
                         <Wire Id="w93" Joints="N(n103:Out) N(n102:c0t0v)" />
                         <Wire Id="w94" Joints="N(n109:Out) N(n108:c0t0v)" />
                         <Wire Id="w95" Joints="N(n108:c0t1v) h(21) v(-21) N(n111:y)" />
@@ -115,7 +115,7 @@
                         <Multiply Id="n129" Terminals="x\*y=w130, y=w129, x=w128" TopLeft="658 203" />
                         <Literal Id="n130" Terminals="Out=w127" Bounds="497 168 49 14" Interpretation="Exact" DataType="Int32">65536</Literal>
                         <Literal Id="n131" Terminals="Out=w129" Bounds="588 217 28 14" Interpretation="Exact" DataType="Int32">-1</Literal>
-                        <Wire Id="w133" Joints="N(n113:x\+y) h(122) v(63) N(n137:x) B(2) v(49) h(207) v(-28) N(n136:f) B(1) v(-7) N(n141:y)" />
+                        <Wire Id="w133" Joints="N(n113:x\+y) h(122) v(-7) N(n141:y) B(1) v(63) v(49) h(207) v(-28) N(n136:f) B(4) N(n137:x)" />
                         <Wire Id="w135" Joints="N(n140:Out) N(n137:y)" />
                         <Wire Id="w136" Joints="N(n137:x\ \&gt;\ y\?) N(n136:s)" />
                         <Wire Id="w137" Joints="N(n143:Out) N(n141:x)" />
@@ -130,14 +130,14 @@
                         <Multiply Id="n142" Terminals="x\*y=w140, y=w139, x=w138" TopLeft="658 364" />
                         <Literal Id="n143" Terminals="Out=w137" Bounds="497 329 49 14" Interpretation="Exact" DataType="Int32">65536</Literal>
                         <Literal Id="n144" Terminals="Out=w139" Bounds="588 378 28 14" Interpretation="Exact" DataType="Int32">-1</Literal>
-                        <Wire Id="w88" Joints="N(n17:readData) h(21) v(35) N(n104:array) B(2) v(77) N(n106:array) B(4) v(77) v(76.636) h(0.301) v(0.364) v(45.265) v(3.735) N(n102:array) B(10) h(-0.301) v(80.735) N(n108:array) B(9) N(n75:array) B(6) N(n73:array)" />
+                        <Wire Id="w88" Joints="N(n17:readData) h(21) v(35) v(77) v(77) N(n73:array) B(4) v(76.636) h(0.301) v(0.364) N(n75:array) B(8) v(45.265) h(-0.301) v(80.735) N(n108:array) B(10) v(3.735) N(n102:array) B(3) N(n106:array) B(2) N(n104:array)" />
                         <Wire Id="w87" Joints="N(n105:Out) N(n104:c0t0v)" />
                         <Wire Id="w89" Joints="N(n107:Out) N(n106:c0t0v)" />
                         <Wire Id="w91" Joints="N(n106:c0t1v) h(21) v(-21) N(n110:y)" />
                         <Wire Id="w92" Joints="N(n114:Out) N(n110:x)" />
                         <Wire Id="w99" Joints="N(n104:c0t1v) N(n115:x)" />
                         <Wire Id="w100" Joints="N(n110:x\*y) h(7) v(-35) N(n115:y)" />
-                        <Wire Id="w101" Joints="N(n115:x\+y) h(76) v(14) h(46) v(-56) N(n133:y) B(3) v(14) N(n119:x) B(6) v(49) h(207) v(-28) N(n118:f)" />
+                        <Wire Id="w101" Joints="N(n115:x\+y) h(76) v(14) h(46) v(14) v(49) h(207) v(-28) N(n118:f) B(4) N(n119:x) B(3) v(-56) N(n133:y)" />
                         <Wire Id="w102" Joints="N(n120:Out) N(n14:y)" />
                         <Wire Id="w103" Joints="N(n132:Out) N(n119:y)" />
                         <Wire Id="w104" Joints="N(n119:x\ \&gt;\ y\?) N(n118:s)" />
@@ -169,7 +169,7 @@
                         <Wire Id="w115" Joints="N(n136:s\?\ t\:f) N(n121:x)" />
                         <Wire Id="w116" Joints="N(n138:Out) N(n121:y)" />
                         <SquareRoot Id="n139" Terminals="sqrt\(x\)=w126, x=w125" TopLeft="1022 273" />
-                        <Wire Id="w120" Joints="N(n121:x\/y) h(11) h(23) v(-7) N(n153:x) B(2) v(7) N(n153:y) B(1) v(-49) N(n152:Y)" />
+                        <Wire Id="w120" Joints="N(n121:x\/y) h(11) v(-49) N(n152:Y) B(1) h(23) v(7) N(n153:y) B(4) v(-7) N(n153:x)" />
                         <Add Id="n148" Terminals="x\+y=w125, y=w123, x=w143" TopLeft="980 266" />
                         <Wire Id="w123" Joints="N(n153:x\*y) h(35) v(-147) N(n148:y)" />
                         <Wire Id="w125" Joints="N(n148:x\+y) N(n139:x)" />
@@ -194,7 +194,8 @@
                         <Multiply Id="n146" Terminals="x\*y=w143, y=w144, x=w144" TopLeft="910 259" />
                         <Wire Id="w143" Joints="N(n146:x\*y) N(n148:x)" />
                         <Multiply Id="n153" Terminals="x\*y=w123, y=w120, x=w120" TopLeft="910 420" />
-                        <Wire Id="w144" Joints="N(n116:x\/y) h(11) h(24) v(7) N(n146:y) B(2) v(-7) N(n146:x) B(1) v(98) N(n152:X)" />
+                        <Wire Id="w144" Joints="N(n116:x\/y) h(11) v(98) N(n152:X) B(1) h(24) v(-7) N(n146:x) B(4) v(7) N(n146:y)" />
+                        <MethodCall Id="n147" Bounds="980 70 28 14" Target="X3\.Lib:GlobalGetSingle" />
                     </FlatSequence.Frame>
                     <FlatSequence.Frame Id="D13" Bounds="1589 7 140 623">
                         <Wire Id="w68" Joints="N(n58:Out) N(n62:msToWait)" />
@@ -206,8 +207,8 @@
                     <FlatSequence.Tunnel Id="b15" Terminals="n5=w12, D9=w2" TopLeft="238 0" />
                     <FlatSequence.Tunnel Id="b16" Terminals="n5=w10, D9=w4" TopLeft="224 0" />
                 </FlatSequence>
-                <Wire Id="w10" Joints="N(n10:portOut) h(42) N(b13:n5) B(1) h(182) N(b16:n5)" />
-                <Wire Id="w12" Joints="N(n10:layer) h(56) N(b14:n5) B(1) h(182) N(b15:n5)" />
+                <Wire Id="w10" Joints="N(n10:portOut) h(42) h(182) N(b16:n5) B(1) N(b13:n5)" />
+                <Wire Id="w12" Joints="N(n10:layer) h(56) h(182) N(b15:n5) B(1) N(b14:n5)" />
             </BlockDiagram>
             <Icon>
                 <Model0:IconPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Model0="clr-namespace:NationalInstruments.LabVIEW.VI.Design;assembly=NationalInstruments.LabVIEW.VI.SourceModel" xmlns:fpruntime="clr-namespace:NationalInstruments.LabVIEW.FrontPanelRuntime;assembly=NationalInstruments.LabVIEW.FrontPanelRuntime" xmlns:ation="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Height="70" Width="56">

@@ -27,14 +27,12 @@
       <Parameter Name="GyroZ" DisplayName="Gyroscope[°/s] Z-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Angular velocity along the Z-axis</p>]]></Description>
       </Parameter>
-      <!--
       <Parameter Name="TiltX" DisplayName="Tilt[°] X-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Tilt along the X-axis</p>]]></Description>
       </Parameter>
       <Parameter Name="TiltY" DisplayName="Tilt[°] Y-axis">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Tilt along the Y-axis</p>]]></Description>
       </Parameter>
-      -->
       <Parameter Name="Comparison" DisplayName="Compare Type">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> 0 - 5<br/><b>Notes:</b> 0:  = (Equal to)<br/>1:  ≠ (Not Equal to)<br/>2:  &gt; (Greater than)<br/>3:  ≥ (Greater than or Equal to)<br/>4:  &lt; (Less than)<br/>5:  ≤ (Less than or Equal to)</p>]]></Description>
       </Parameter>
@@ -53,11 +51,9 @@
       <Block Mode="MeasureGyroscope" DisplayName="Gyroscope">
         <Description><![CDATA[The Measure - Acceleration mode measures and outputs the angular velocities along the X, Y, and Z axes.]]></Description>
       </Block>
-      <!--
       <Block Mode="MeasureTilt" DisplayName="Tilt">
         <Description><![CDATA[The Measure - Tilt mode measures and outputs the tilts along the X and Y axes.]]></Description>
       </Block>
-      -->
       <Category Name="CompareAcceleration" DisplayName="Acceleration">
         <Block Mode="CompareAccelerationX" DisplayName="X-axis">
           <Description><![CDATA[The Compare - Acceleration X-axis block compares the acceleration along the X-axis to the threshold value. The True/False result is output to the Compare Result.]]></Description>

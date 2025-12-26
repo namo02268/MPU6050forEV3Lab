@@ -56,6 +56,26 @@
         <Flags>PBROnly</Flags>
         <Hardware></Hardware>
       </Block>
+      <Block>
+        <Mode>MeasureTilt</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureTilt.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="TiltX" />
+        <ParameterReference Name="TiltY" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureFilteredTilt</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureFilteredTilt.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="TiltX" />
+        <ParameterReference Name="TiltY" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
       <Category Name="CompareAcceleration">
         <Block>
           <Mode>CompareAccelerationX</Mode>
