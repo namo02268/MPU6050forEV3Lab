@@ -48,15 +48,6 @@
         <Hardware></Hardware>
       </Block>
       <Block>
-        <Mode>MeasureTemperature</Mode>
-        <Reference Type="VILib" Name="MPU6050MeasureTemperature.vix" />
-        <ParameterReference Name="Port" />
-        <ParameterReference Name="Tmp" />
-        <BlockInterface>Measure</BlockInterface>
-        <Flags>PBROnly</Flags>
-        <Hardware></Hardware>
-      </Block>
-      <Block>
         <Mode>MeasureTilt</Mode>
         <Reference Type="VILib" Name="MPU6050MeasureTilt.vix" />
         <ParameterReference Name="Port" />
@@ -67,11 +58,10 @@
         <Hardware></Hardware>
       </Block>
       <Block>
-        <Mode>MeasureFilteredTilt</Mode>
-        <Reference Type="VILib" Name="MPU6050MeasureFilteredTilt.vix" />
+        <Mode>MeasureTemperature</Mode>
+        <Reference Type="VILib" Name="MPU6050MeasureTemperature.vix" />
         <ParameterReference Name="Port" />
-        <ParameterReference Name="TiltX" />
-        <ParameterReference Name="TiltY" />
+        <ParameterReference Name="Tmp" />
         <BlockInterface>Measure</BlockInterface>
         <Flags>PBROnly</Flags>
         <Hardware></Hardware>
@@ -114,18 +104,6 @@
           <Hardware></Hardware>
         </Block>
       </Category>
-      <Block>
-        <Mode>CompareTemperature</Mode>
-        <Reference Type="VILib" Name="MPU6050CompareTemperature.vix" />
-        <ParameterReference Name="Port" />
-        <ParameterReference Name="Comparison" />
-        <ParameterReference Name="Threshold" />
-        <ParameterReference Name="Result" />
-        <ParameterReference Name="Tmp" />
-        <BlockInterface>Compare</BlockInterface>
-        <Flags>PBROnly</Flags>
-        <Hardware></Hardware>
-      </Block>
       <Category Name="CompareGyroscope">
         <Block>
           <Mode>CompareGyroscopeX</Mode>
@@ -164,6 +142,44 @@
           <Hardware></Hardware>
         </Block>
       </Category>
+      <Category Name="CompareTilt">
+        <Block>
+          <Mode>CompareTiltX</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareTiltX.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="TiltX" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+        <Block>
+          <Mode>CompareTiltY</Mode>
+          <Reference Type="VILib" Name="MPU6050CompareTiltY.vix" />
+          <ParameterReference Name="Port" />
+          <ParameterReference Name="Comparison" />
+          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Result" />
+          <ParameterReference Name="TiltY" />
+          <BlockInterface>Compare</BlockInterface>
+          <Flags>PBROnly</Flags>
+          <Hardware></Hardware>
+        </Block>
+      </Category>
+      <Block>
+        <Mode>CompareTemperature</Mode>
+        <Reference Type="VILib" Name="MPU6050CompareTemperature.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Tmp" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
     </PolyGroup>
   </PolyGroups>
 </EditorDefinitions>

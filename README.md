@@ -23,7 +23,7 @@ MPU6050 を EV3 で使用する場合、**MPU6050 モジュール側に実装さ
 一方、LEGO MINDSTORMS EV3 のセンサーポートでは、  
 **外部 I2C デバイス側のプルアップ抵抗値として `82kΩ` が LEGO 公式により推奨されています**。
 
-![](./images/README_Resisters_Recuired.jpg)
+![](./images/README_Resisters_Requirement.jpg)
 
 >出典：LEGO Education, EV3 Hardware Developer Kit
 >https://education.lego.com/en-us/product-resources/mindstorms-ev3/downloads/developer-kits/
@@ -61,6 +61,9 @@ EV3 コネクタの各端子を、MPU6050 の端子に次のように接続し�
 > [!NOTE]  
 > `47kΩ` や `100kΩ` の抵抗値でも動作確認は取れています。
 
+![](./images/README_Wiring_Diagram.jpg)
+
+
 ![](./images/README_Circuit.jpg)
 
 ## 拡張ブロックのインストール方法 (Installation)
@@ -72,21 +75,22 @@ EV3 コネクタの各端子を、MPU6050 の端子に次のように接続し�
 
 ## 拡張ブロックの使用方法
 ### 測定モード
-加速度、ジャイロ（角速度）、温度を測定できます。  
+加速度、ジャイロ（角速度）、傾き、温度を測定できます。  
 それぞれの出力単位は以下の通りです。
 
-- 加速度：[G]  
-- 角速度：[°/s]  
-- 温度：[°]
+- 加速度：[G]
+- 角速度：[°/s]
+- 傾き：[°]
+- 温度：[℃]
 
 角速度を時間で積分することで角度を求めることも可能ですが、
 **EV3 の I2C 通信速度は低いため、角度計算の精度は高くありません。**
 
-![](./images/README_Measure.jpg)
+![](./images/README_Measure_Mode.jpg)
 
 ### 比較モード
 測定した値を、設定した閾値と比較するモードです。  
 比較結果は **真偽値（True / False）** として出力されます。
 スイッチやループブロックからも使用できます。
 
-![](./images/README_Compare.jpg)
+![](./images/README_Compare_Mode.jpg)
