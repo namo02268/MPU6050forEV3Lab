@@ -39,6 +39,18 @@
       <Parameter Name="Threshold" DisplayName="しきい値">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
       </Parameter>
+      <Parameter Name="Threshold_Acc" DisplayName="しきい値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Threshold_Gyro" DisplayName="しきい値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Threshold_Tmp" DisplayName="しきい値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Threshold_Tilt" DisplayName="しきい値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
+      </Parameter>
       <Parameter Name="Result" DisplayName="比較結果">
         <Description><![CDATA[<p><b>タイプ:</b> ロジック<br/><b>備考:</b> 比較モードの真/偽の結果です。</p>]]></Description>
       </Parameter>

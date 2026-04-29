@@ -12,7 +12,10 @@
       <Parameter Name="GyroZ" Direction="Output" DataType="Single" Identification="Identification_Gyro_Z.png" />
       <Parameter Name="TiltX" Direction="Output" DataType="Single" Identification="Identification_Tilt_X.png" />
       <Parameter Name="TiltY" Direction="Output" DataType="Single" Identification="Identification_Tilt_Y.png" />
-      <Parameter Name="Threshold" Identification="Identification_Threshold_MPU6050.xml" DataType="Single" Direction="Input" DefaultValue="128" MinValue="0" MaxValue="255" />
+      <Parameter Name="Threshold_Acc" Identification="Identification_Threshold_Acc_MPU6050.xml" DataType="Single" Direction="Input" DefaultValue="0.5" MinValue="-2" MaxValue="2" />
+      <Parameter Name="Threshold_Gyro" Identification="Identification_Threshold_Gyro_MPU6050.xml" DataType="Single" Direction="Input" DefaultValue="100" MinValue="-250" MaxValue="250" />
+      <Parameter Name="Threshold_Tmp" Identification="Identification_Threshold_Tmp_MPU6050.xml" DataType="Single" Direction="Input" DefaultValue="25" MinValue="-40" MaxValue="80" />
+      <Parameter Name="Threshold_Tilt" Identification="Identification_Threshold_Tilt_MPU6050.xml" DataType="Single" Direction="Input" DefaultValue="45" MinValue="-90" MaxValue="90" />
       <Parameter Name="Result" CompilerDirectives="Result" Identification="Identification_Result.png" DataType="Boolean" Direction="Output"/>
       <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
 
@@ -72,7 +75,7 @@
           <Reference Type="VILib" Name="MPU6050CompareAccelerationX.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Acc" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="AccX" />
           <BlockInterface>Compare</BlockInterface>
@@ -84,7 +87,7 @@
           <Reference Type="VILib" Name="MPU6050CompareAccelerationY.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Acc" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="AccY" />
           <BlockInterface>Compare</BlockInterface>
@@ -96,7 +99,7 @@
           <Reference Type="VILib" Name="MPU6050CompareAccelerationZ.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Acc" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="AccZ" />
           <BlockInterface>Compare</BlockInterface>
@@ -110,7 +113,7 @@
           <Reference Type="VILib" Name="MPU6050CompareGyroscopeX.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Gyro" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="GyroX" />
           <BlockInterface>Compare</BlockInterface>
@@ -122,7 +125,7 @@
           <Reference Type="VILib" Name="MPU6050CompareGyroscopeY.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Gyro" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="GyroY" />
           <BlockInterface>Compare</BlockInterface>
@@ -134,7 +137,7 @@
           <Reference Type="VILib" Name="MPU6050CompareGyroscopeZ.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Gyro" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="GyroZ" />
           <BlockInterface>Compare</BlockInterface>
@@ -148,7 +151,7 @@
           <Reference Type="VILib" Name="MPU6050CompareTiltX.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Tilt" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="TiltX" />
           <BlockInterface>Compare</BlockInterface>
@@ -160,7 +163,7 @@
           <Reference Type="VILib" Name="MPU6050CompareTiltY.vix" />
           <ParameterReference Name="Port" />
           <ParameterReference Name="Comparison" />
-          <ParameterReference Name="Threshold" />
+          <ParameterReference Name="Threshold_Tilt" />
           <ParameterReference Name="Result" />
           <ParameterReference Name="TiltY" />
           <BlockInterface>Compare</BlockInterface>
@@ -173,7 +176,7 @@
         <Reference Type="VILib" Name="MPU6050CompareTemperature.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Comparison" />
-        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Threshold_Tmp" />
         <ParameterReference Name="Result" />
         <ParameterReference Name="Tmp" />
         <BlockInterface>Compare</BlockInterface>

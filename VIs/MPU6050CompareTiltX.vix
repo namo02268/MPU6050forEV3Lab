@@ -6,7 +6,7 @@
             <DataItem Name="SequenceOut" DataType="NationalInstruments:SourceModel:DataTypes:X3SequenceWireDataType" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="4" />
             <DataItem Name="Port" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="0" DefaultValue="0" />
             <DataItem Name="Comparison" DataType="Int32" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="1" DefaultValue="4" />
-            <DataItem Name="Threshold" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="2" DefaultValue="50" />
+            <DataItem Name="Threshold_Tilt" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="2" DefaultValue="50" />
             <DataItem Name="Result" DataType="Boolean" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="1" DefaultValue="False" />
             <DataItem Name="InterruptsToListenFor_16B03592_CD76_4D58_8DC3_E3C3091E327A" DataType="Int32" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="3" />
             <DataItem Name="TiltX" DataType="Single" DefaultTerminalDirection="Input" CallUsage="Optional" CallDirection="Output" CallIndex="0" />
@@ -38,8 +38,8 @@
                 <DataAccessor DataItem="Comparison" Id="n6" Bounds="217 280 98 14">
                     <Terminal Id="Value" Direction="Output" Wire="w54" Hotspot="1 0.5" Bounds="0 0 98 14" />
                 </DataAccessor>
-                <DataAccessor DataItem="Threshold" Id="n59" Bounds="238 308 84 14">
-                    <Terminal Id="Value" Direction="Output" Wire="w11" Hotspot="1 0.5" Bounds="0 0 84 14" />
+                <DataAccessor DataItem="Threshold_Tilt" Id="n59" Bounds="210 308 112 14">
+                    <Terminal Id="Value" Direction="Output" Wire="w11" Hotspot="1 0.5" Bounds="0 0 112 14" />
                 </DataAccessor>
                 <DataAccessor DataItem="Result" Id="n60" Bounds="938 273 70 14">
                     <Terminal Id="Value" Direction="Input" Wire="w20" Hotspot="0 0.5" Bounds="0 0 70 14" />
@@ -70,7 +70,7 @@
                     <FlatSequence.Tunnel Id="b20" Terminals="n42=w19, D23=w17" TopLeft="406 0" />
                     <FlatSequence.Tunnel Id="b17" Terminals="n42=w20, D23=w12" TopLeft="588 56" />
                 </FlatSequence>
-                <Wire Id="w16" Joints="N(n14:TiltX) h(11) v(147) N(n2:First\ Operand) B(1) N(n3:Boolean)" />
+                <Wire Id="w16" Joints="N(n14:TiltX) h(11) N(n3:Boolean) B(1) v(147) N(n2:First\ Operand)" />
                 <DataAccessor DataItem="TiltX" Id="n3" Bounds="469 119 70 14">
                     <Terminal Id="Boolean" Direction="Input" Wire="w16" Hotspot="0 0.5" Bounds="0 0 70 14" />
                 </DataAccessor>
